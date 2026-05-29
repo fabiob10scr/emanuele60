@@ -671,8 +671,8 @@
     <h1>I <span>60 anni</span><br>di Emanuele!</h1>
     <p class="hero-sub">Non mancare — sarà una festa indimenticabile.</p>
     <p class="hero-date">// DOM 07.06.2026 · ORE 17:00 //</p>
-    <a class="btn" href="https://oooh.events/evento/i-60-anni-di-emanuele-biglietti/" target="_blank" rel="noopener">
-      ▶ Prenota il tuo posto gratuito
+    <a class="btn" href="#rsvp" onclick="event.preventDefault(); document.getElementById('rsvp').scrollIntoView({behavior:'smooth'});">
+      ▶ Prenota il tuo posto
     </a>
 
         <div class="hero-img-wrap">
@@ -756,7 +756,7 @@
   </section>
 
   <!-- RSVP -->
-  <section class="bg-olive">
+  <section class="bg-olive" id="rsvp">
     <div class="section-inner">
       <div class="rsvp-inner">
         <span class="rsvp-medal">🎖️</span>
@@ -767,7 +767,7 @@
           <input type="text" name="nome" placeholder="Nome" required autocomplete="given-name" />
           <input type="text" name="cognome" placeholder="Cognome" required autocomplete="family-name" />
           <input type="hidden" name="_subject" value="✅ Nuova registrazione — Pass 60 Lele" />
-          <button type="submit" class="btn">▶ Prendi il tuo pass gratuito</button>
+          <button type="submit" class="btn">▶ Invia la tua conferma di partecipazione</button>
         </form>
         <p class="rsvp-msg" id="rsvp-msg"></p>
       </div>
@@ -854,7 +854,7 @@
       msg.className = 'rsvp-msg err';
       msg.textContent = '⚠ Errore nell\'invio. Riprova o scrivi a fabiocrestani@icloud.com';
       btn.disabled = false;
-      btn.textContent = '▶ Prendi il tuo pass gratuito';
+      btn.textContent = '▶ Invia la tua conferma di partecipazione';
     });
   });
 
